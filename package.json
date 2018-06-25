@@ -1,5 +1,5 @@
 {
-  "name": "abp-filter-parser-cpp-v10",
+  "name": "abp-filter-parser-v10",
   "main": "./build/Release/abp-filter-parser-cpp",
   "version": "1.0.0",
   "description": "C++ Adblock Plus filter parser for lists like EasyList (node v10 fork)",
