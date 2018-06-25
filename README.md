@@ -1,6 +1,10 @@
-#fork
+# Fork
 
 This is a fork to make abp-filter-parser-cpp work with with node v10
+
+```
+npm install --save abp-filter-parser-cpp-v10
+```
 
 # abp-filter-parser-cpp
 
@@ -14,7 +18,7 @@ It uses a bloom filter and Rabin-Karp algorithm to be super fast.
 ## To include abp-filter-parser-cpp in your project:
 
 ```
-npm install --save abp-filter-parser-cpp
+npm install --save abp-filter-parser-cpp-v10
 ```
 
 ## JS Sample
