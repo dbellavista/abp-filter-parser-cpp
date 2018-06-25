@@ -21,6 +21,7 @@ using v8::String;
 using v8::Boolean;
 using v8::Value;
 using v8::Exception;
+using v8::Context;
 
 Persistent<Function> ABPFilterParserWrap::constructor;
 
@@ -99,6 +100,7 @@ void ABPFilterParserWrap::Init(Local<Object> exports) {
 
 void ABPFilterParserWrap::New(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
+  Local<Context> context = isolate->GetCurrentContext();
 
   if (args.IsConstructCall()) {
     // Invoked as constructor: `new ABPFilterParser(...)`
@@ -111,7 +113,9 @@ void ABPFilterParserWrap::New(const FunctionCallbackInfo<Value>& args) {
     const int argc = 1;
     Local<Value> argv[argc] = { args[0] };
     Local<Function> cons = Local<Function>::New(isolate, constructor);
-    args.GetReturnValue().Set(cons->NewInstance(argc, argv));
+
+    Local<Object> result = cons->NewInstance(context, argc, argv).ToLocalChecked();
+    args.GetReturnValue().Set(result);
   }
 }
 

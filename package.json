@@ -1,31 +1,29 @@
 {
-  "name": "abp-filter-parser-cpp",
+  "name": "abp-filter-parser-cpp-v10",
   "main": "./build/Release/abp-filter-parser-cpp",
-  "version": "1.2.10",
-  "description": "C++ Adblock Plus filter parser for lists like EasyList",
+  "version": "1.0.0",
+  "description": "C++ Adblock Plus filter parser for lists like EasyList (node v10 fork)",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "bloom-filter-cpp": "1.1.x",
+    "bloom-filter-cpp": "^1.1.8",
     "cppunitlite": "^1.0.0",
-    "hashset-cpp": "1.0.x",
-    "nan": "^2.2.1"
+    "hashset-cpp-v10": "^1.0.0",
+    "nan": "^2.10.0"
   },
   "devDependencies": {
-    "commander": "^2.9.0",
-    "node-gyp": "^3.4.0",
-    "nsp": "^2.3.0",
-    "pre-commit": "^1.1.2",
+    "commander": "^2.15.1",
+    "node-gyp": "^3.7.0",
+    "nsp": "^3.2.1",
     "s3": "^4.4.0",
-    "standard": "^8.4.0"
+    "standard": "^11.0.1"
   },
   "scripts": {
     "test": "make test",
     "build": "make",
     "sample": "make sample",
     "perf": "make perf",
-    "preinstall": "npm install bloom-filter-cpp && npm install hashset-cpp",
     "install": "node-gyp rebuild",
     "lint": "npm run lint-cpp && npm run lint-js",
     "lint-cpp": "./scripts/cpplint.py",
@@ -36,17 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbondy/abp-filter-parser-cpp.git"
+    "url": "git+https://github.com/dbellavista/abp-filter-parser-cpp.git"
   },
   "author": "Brian R. Bondy <netzen@gmail.com> (http://www.brianbondy.com)",
   "license": "MPL-2.0",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/bbondy/abp-filter-parser-cpp/issues"
+    "url": "https://github.com/dbellavista/abp-filter-parser-cpp/issues"
   },
-  "homepage": "https://github.com/bbondy/abp-filter-parser-cpp#readme",
-  "pre-commit": [
-    "lint-cpp",
-    "lint-js"
-  ]
+  "homepage": "https://github.com/dbellavista/abp-filter-parser-cpp#readme"
 }
