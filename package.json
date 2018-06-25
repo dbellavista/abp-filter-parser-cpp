@@ -1,7 +1,7 @@
 {
   "name": "abp-parser-v10",
   "main": "./build/Release/abp-filter-parser-cpp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "C++ Adblock Plus filter parser for lists like EasyList (node v10 fork)",
   "directories": {
     "test": "test"
@@ -24,6 +24,7 @@
     "build": "make",
     "sample": "make sample",
     "perf": "make perf",
+    "preinstall": "npm install bloom-filter-cpp hashset-cpp-v10",
     "lint": "npm run lint-cpp && npm run lint-js",
     "lint-cpp": "./scripts/cpplint.py",
     "lint-js": "standard",

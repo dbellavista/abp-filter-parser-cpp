@@ -11,17 +11,17 @@
       "cosmeticFilter.h",
       "filter.cpp",
       "filter.h",
-      "<!(node -e "require(\'bloom-filter-cpp\'))/BloomFilter.cpp",
-      "<!(node -e "require(\'bloom-filter-cpp\'))/BloomFilter.h",
-      "<!(node -e "require(\'bloom-filter-cpp\'))/hashFn.cpp",
-      "<!(node -e "require(\'bloom-filter-cpp\'))/hashFn.h",
-      "<!(node -e "require(\'hashset-cpp-v10\'))/HashSet.cpp",
-      "<!(node -e "require(\'hashset-cpp-v10\'))/HashSet.h"
+      "./node_modules/bloom-filter-cpp/BloomFilter.cpp",
+      "./node_modules/bloom-filter-cpp/BloomFilter.h",
+      "./node_modules/bloom-filter-cpp/hashFn.cpp",
+      "./node_modules/bloom-filter-cpp/hashFn.h",
+      "./node_modules/hashset-cpp-v10/HashSet.cpp",
+      "./node_modules/hashset-cpp-v10/HashSet.h"
     ],
     "include_dirs": [
       ".",
-      "<!(node -e "require(\'bloom-filter-cpp\'))",
-      "<!(node -e "require(\'hashset-cpp-v10\'))"
+      './node_modules/bloom-filter-cpp',
+      './node_modules/hashset-cpp-v10'
     ],
     "dependencies": [
     ],
